@@ -1,0 +1,125 @@
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    header{
+       .menu{
+           
+           .menu-left{
+               line-height: 40px;
+               span{
+                padding-right: 12px;
+               }
+           }
+            .menu-right{
+                display: none;
+            }
+            .logo{
+                display: none;
+            }
+        }
+    }
+    #top{
+        height: 376px;
+        img{
+            padding-top:30px;
+        }
+        .top-slider{
+            @include slider(30px,84px,-10px,750px,66px);
+        }
+    }
+    #know{
+        height: 1155px;
+        .container{
+            .img-logo{
+                margin: 20px 0px 15px 0px;
+            }
+            h3{
+                margin-bottom: 20px;
+            }
+            .know-row{
+                .row{
+                    .row-sub{
+                        height: 495px;
+                    }
+                }
+            }
+        }
+    }
+    #review{
+        .container{
+            img{
+                margin: 20px 0px 15px 0px;
+            }
+            h3{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+// phone
+@media screen and (max-width: 600px) {
+    header{
+        .menu{
+            .menu-left{
+                line-height: 30px;
+            }
+            .menu-right{
+                display: none;
+            }
+            .logo{
+                display: none;
+            }
+        }
+        .banner{
+            img{ height: auto;}
+        }
+    }
+    #know{
+        .container{
+        .know-row{
+            .row{
+                .row-sub{
+                    // height: 485px;
+                    .know-text{
+                        p.date{
+                            &::before{
+                                left: 439px;
+                                top: 504px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        } 
+    } 
+}
+// ipad small
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+   header{
+       .banner{
+           img{
+               height: auto;
+           }
+       }
+       .menu{
+           .menu-left{
+               line-height: 24px;
+               padding-top: 14px;
+               span{ display: block !important;}
+           }
+           .logo{
+               .img-outside{
+                    left: 91px !important;
+               }
+           }
+       }
+   }
+    #know{
+        .know-row{
+            .row-sub{
+                height: 485px;
+                
+            }
+        }
+   }
+}
+// ipad big

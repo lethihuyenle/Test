@@ -1,0 +1,97 @@
+// @mixin fa($i){
+//     @if ($i == 1){
+//         background: #475993;
+//     }
+//     @else if ($i == 2){
+//         background: salmon;
+//     }
+//     @else if ($i == 3){
+//         background: #ff0000;
+//     }
+//     @else if ($i == 4){
+//         background: black;
+//     }
+//     @else if ($i == 5){
+//         background: pink;
+//     }
+//     @else{
+//         background-color: black;
+//     }
+// }
+@mixin p-date{
+    float: right;
+    font-size: 12px;
+    @content;
+}
+@mixin menu {
+    height: 105px;
+    line-height: 105px;
+    display: inline-block;
+}
+@mixin review-img{
+    content: "\f0d8";
+    font-family: FontAwesome;
+    color: white;
+    font-size: 70px;
+    position: absolute;
+    top: -62px;
+    left: 35px;
+}
+@mixin review-span($color){
+    content: "";
+    width: 1px;
+    height: 14px;
+    background-color: $color;
+    position: absolute;
+    @content;
+}
+@mixin slider($padding-top,$top,$margin-slider,$font-weight,$font-size) {
+    .owl-carousel.owl-theme.owl-loaded.owl-drag{
+        .owl-stage-outer{
+            position: relative;
+            z-index: 1;
+            .owl-stage{
+                img{
+                    padding-top: $padding-top;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .owl-nav{
+            display: block !important;
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            top:$top;
+            // 44px
+            .owl-prev{
+                float: left;
+                margin-left: $margin-slider;
+                // -3px
+                span{
+                    color: #98aab4;
+                    font-weight: $font-weight;
+                    font-size:$font-size;
+                    // 600,43px
+                }
+            }
+            .owl-next{
+                float: right;
+                margin-right: $margin-slider;
+                span{
+                    color: #98aab4;
+                    font-weight: $font-weight;
+                    font-size:$font-size;
+                }
+            }
+        }
+    }
+    
+}
+// placehoder
+%hr{
+    background-color: #ff6c6f;
+    height: 0px;    
+    margin-top: 0px;
+    float: left;
+}

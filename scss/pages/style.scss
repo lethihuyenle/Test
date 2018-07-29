@@ -1,0 +1,326 @@
+@import "../helpers/mixins";
+@import "../helpers/variables";
+@import "./responsive";
+
+body{
+    margin: 0px;
+}
+    // header{
+    //     background-color: $background-color-dark;
+    //     // height: 663px;
+    //     .banner{
+    //         position: relative;
+    //         z-index: 1;
+    //         img{
+    //             width: 100%;
+    //             height: 663px;
+    //         }
+    //     }
+    //     .text{
+    //         text-align: center;
+    //         position: absolute;
+    //         width: 100%;
+    //         z-index: 2;
+    //         top: 315px;
+    //         p{
+    //             font-size: 43px;
+    //             color: white;
+    //         }
+    //         button{
+    //             width: 130px;
+    //             height: 42px;
+    //             font-size: 18px;
+    //         }
+    //     }
+    // }
+
+    header{
+        // background-color: $background-color-dark;
+        .banner{
+            position: relative;
+            z-index: 1;
+            img{
+                width: 100%;
+                height: 663px;
+            }
+        }
+        .text{
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+            top: 315px;
+            p{
+                font-size: 43px;
+                color: white;
+            }
+            button{
+                width: 130px;
+                height: 42px;
+                font-size: 18px;
+            }
+        }
+        .menu{
+            background-color: white;
+            padding: 5px 0px 5px 0px;
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            .menu-left{
+                line-height: 98px;
+                span{
+                    padding-right: 30px;
+                    a{
+                        color: black;
+                        font-weight: 200;
+                    }
+                }
+            }
+            .menu-right{
+                float: right;
+                line-height: 98px;
+                img{
+                    padding-left: 20px;
+                }
+                a{
+                    color: black;
+                    font-weight: 200;
+                }
+            }
+            .logo{
+                text-align: center;
+                .img-outside{
+                    position: absolute;
+                    top: 23px;
+                    left: 161px;
+                    z-index: 3;
+                }
+                .img-inside{
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+// end header
+    .container{
+        text-align: center;
+        padding: 0px;
+    }
+        #top{
+            background-color: $background-color-light;
+            height: 465px;
+            img{
+                padding-top:70px;
+                padding-bottom: 15px;
+            }
+            .top-slider{
+                @include slider(70px,84px,-10px,750px,66px);
+            }
+        }
+        // row 1
+        #know{
+            // height: 794px;
+            background-color: $background-color-dark;
+            .container{
+                .img-logo{
+                    margin: 48px 0px 20px 0px;
+                }
+                h3{
+                    margin-bottom: 42px;
+                }
+                .know-row{
+                    padding-bottom: 65px;
+                    .row{
+                        .row-sub{
+                            background-color: white;
+                            height: 553px;
+                            margin-bottom: 20px;
+                            img{
+                                width: 100%;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                            }
+                            .know-text{
+                                color: black;
+                                padding-left: 20px;
+                                padding-right: 20px;
+                                padding-top: 45px;
+                                text-align: left;
+                                .hr-left{
+                                    @extend %hr;
+                                    width: 81%;
+                                }
+                                .hr-right{
+                                    @extend %hr;
+                                    width: 79%;
+                                }
+                                p{
+                                    clear: both;
+                                }
+                                p.date{
+                                    @include p-date;
+                                    &::before{
+                                        @include review-span(red);
+                                        left: 468px;
+                                        top: 525px;
+                                    }
+                                }
+                         }
+                    }
+                }
+                }
+            }
+        }
+        // row 2
+        #review{
+            background-color: $background-color-light;
+            // height: 1500px;
+            .container{
+                img{
+                    margin-bottom: 25px;
+                    margin-top: 30px;
+                }
+                h3{
+                    margin-bottom: 30px;
+                }
+                .row{
+                    .review-row{
+                        // height: 600px;
+                        background-color: white;
+                        margin-bottom: 20px;
+                        overflow: auto;
+                        width: 100%;
+                        img{
+                            margin-bottom: 0px;
+                            margin-top: 0px;
+                            // width: 360px;
+                            height: 360px;
+                            width: 100%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                        }
+                        .review-text{
+                            position: relative;
+                            text-align: left;
+                            padding-left: 20px;
+                            padding-top: 20px;
+                            padding-right: 20px;
+                            &::before{
+                            @include review-img;
+                            }
+                            span{font-size: 11px;
+                                padding-right: 15px;
+                                &::after{
+                                    @include review-span(black);
+                                    left: 108px;
+                                    top: 27px;
+                                }
+                            }
+                            h4{
+                                font-size: 20px;
+                                padding-top: 5px;
+                            }
+                             hr{
+                                  @extend %hr;
+                                  width: 100%;
+                             }
+                            p{
+                                text-align: justify;
+                            }
+                            p.date{
+                            @include p-date;
+                            &::before{
+                                @include review-span(red);
+                                top: 213px;
+                                left: 262px;
+                            }
+                            }
+                        }
+                    }
+                }
+                .link{
+                    padding-top: 15px;
+                    padding-bottom: 70px;
+                    a{
+                        color: black;
+                        font-weight: 500;
+                        padding-right: 5px;
+                    }
+                    i{
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        // row 3
+        #connect{
+            // height: 276px;
+            text-align: center;
+            background-color: $background-color-dark;
+            img{
+                margin: 45px 0px 20px 0px;
+            }
+            h3{
+                margin-bottom: 60px;
+            }
+            .icon{
+                padding-bottom: 60px;
+                span{
+                    margin-bottom: 70px;
+                    i{
+                        font-size: 52px;
+                        padding: 0px 22px 0px 22px;
+                        color: #999898;
+                    }
+                }
+            }
+        }
+        // row4
+        #donors{
+            // height: 310px;
+            background-color: $background-color-light;
+            .container{
+                img{
+                    padding-top: 55px;
+                    padding-bottom: 20px;
+                }
+                .slider{
+                    height: 170px;
+                    @include slider(55px,44px,-3px,600px,43px);
+                }
+            }
+        }
+        // row5
+// end content
+    footer{
+        background-color: $background-color-dark;
+        // height: 267px;
+        .container{
+            .footer-top{
+                padding-top: 50px;
+                ul{
+                    list-style: none;
+                    li{
+                        width: 140px;
+                        display: inline-block;
+                        a{
+                            text-decoration: none;
+                            color:black;
+                        }
+                    }
+                }
+                hr{
+                    background-color: #e5e5e5;
+                }
+            }
+            p{
+                text-align: center;
+                padding-bottom: 145px;
+                margin: 0px !important;
+            }
+        }
+    }
+// end footer

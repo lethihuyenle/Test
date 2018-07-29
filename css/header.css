@@ -1,0 +1,16 @@
+header{
+    width: 100%;
+}
+.menu{
+    background-color: antiquewhite;
+    padding:5px 0px 5px 0px;
+}
+.logo .img-outside{
+    display: none;
+}
+.logo{
+    text-align: center;
+}
+.banner img{
+    width: 100%;
+}

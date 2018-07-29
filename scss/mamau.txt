@@ -1,0 +1,5 @@
+#0BB7A5 mau xanh:background
+#4E4A4A nau dam:background feature
+rgba(255, 255, 255, 0.6) trắng nhạt :color small footer
+#c5c5c5 xám nhạt :color mấy icon lớn
+'Raleway', 'Arial', sans-serif :font-family 
